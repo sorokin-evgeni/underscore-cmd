@@ -6,22 +6,24 @@ This module allow you to compile underscore templates from command line. It sear
 underscore-cmd [target] [-options] [--file=<path>] [--sep=<char>]
 ```
 
-*target* is root dir where template files will be searched.
+**target** is root dir where template files will be searched.
 
-*options* boolean options. It contain:
-* f - If flag passed template name will be represented as path to file which contain template sourse. Otherwise template name will be equal to file name without extension
+**options** boolean options. It contain:
+* **f** - If flag passed template name will be represented as path to file which contain template sourse. Otherwise template name will be equal to file name without extension
 
-*file* output file path
+**file** output file path
 
-*sep* use only if -f flag passed. Directory separator will be replaced to the --sep.
+**sep** use only if -f flag passed. Directory separator will be replaced to the --sep.
 
 ### Examples
 Suppose we have given filesystem:
 
+```
 templates/
   modules/
     users.us
-  index.us
+  index.us  
+```
 
 ```
 userscore-cmd ./templates -f --file=tpl.js --sep=.
