@@ -1,0 +1,26 @@
+{
+    "name":         "underscore-cmd",
+    "version":      "0.0.1",
+    "description":  "Compilation of underscore.js templates from command line.",
+    "main":         "underscore-cmd.js",
+    "bin": {
+        "underscore-cmd":   "bin/underscore-cmd"
+    },
+    "author": {
+        "name": "Sorokin Evgeny"
+    },
+    "keywords":     ["underscore.js", "templates", "command line"],
+    "repository":   {
+        "type": "git",
+        "url":  "git@github.com:sorokin-evgeni/underscore-cmd.git"
+    },
+    "engines": {
+        "node": "*"
+    },
+    "dependencies": {
+        "underscore":   "latest",
+        "shelljs":      "latest",
+        "optimist":     "latest"
+    },
+    "readmeFilename": "README.md"
+}

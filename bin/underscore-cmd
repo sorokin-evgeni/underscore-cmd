@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+var optimist = require('optimist')
+    .usage('Precompile handlebar templates.\nUsage: $0 template...', {
+       'file': {
+          'type': 'string',
+          'description': 'Output File',
+          'alias': 'output'
+        },
+        'sep': {
+		  'type': 'string',
+		  'description': 'Directories separator'
+		}
+    });
+
+var target 		= optimist.argv._[0],
+    output 		= optimist.argv.file,
+    full		= optimist.argv.f,
+    help		= optimist.argv.help,
+    separator	= optimist.argv.sep;
+
+var underscoreCmd = require('../underscore-cmd');
+
+if (help !== undefined || !target) {
+	underscoreCmd.help();
+} else {
+	underscoreCmd.process(target, output, full, separator);
+}
