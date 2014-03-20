@@ -21,7 +21,7 @@ Suppose we have given filesystem:
 templates/
   modules/
     users.us
-  index.us
+  index.us  
 
 ```
 userscore-cmd ./templates -f --file=tpl.js --sep=.
